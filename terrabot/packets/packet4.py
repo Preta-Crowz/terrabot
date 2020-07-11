@@ -8,7 +8,7 @@ class Packet4(packet.Packet):
         self.add_data(player.playerID)
         self.add_data(4)  # Skin
         self.add_data(player.hairStyle)
-        self.add_data(player.name, pascal_string=True)
+        
         self.add_data(0)  # HairStyle
         self.add_data(1)  # HideVisual?
         self.add_data(1)  # HideVisual2?
@@ -43,4 +43,4 @@ class Packet4(packet.Packet):
         self.add_data(player.shoeColor[2])
 
         self.add_data(player.difficulty)
-        self.add_data(player.name)
+        self.add_data(player.name, pascal_string=True)
